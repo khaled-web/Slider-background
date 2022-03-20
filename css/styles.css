@@ -130,7 +130,10 @@ body{
   justify-content: center;
   height: 100vh;
   margin: 0;
-  background: url(../images/Air-Columns.jpg) center/cover no-repeat fixed;
+  overflow: hidden;
+  background-position: center center;
+  background-size: cover;
+  transition: var(--transition);
 }
 
 body::before{
@@ -156,13 +159,18 @@ body::before{
   opacity: 0;
   height: 100vh;
   width: 100vw;
-  transition: var(--transition);
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  top: -15vh;
+  left: -15vw;
+  transition: 0.4s ease;
   z-index: 1;
 }
 
 .active{
   opacity: 1;
-  background: url(../images/Air-Columns.jpg) center/cover no-repeat fixed;
+
 }
 
 .arrow{
